@@ -6,6 +6,7 @@ import "core:strings"
 
 // @Incomplete: print pointers
 // @Incomplete: solve float dumb stuff
+// @Todo: change Odin core to escape % (\%)
 
 _print_f64_dumb :: proc(builder: ^strings.Builder, v: f64, digits: uint = 6) {
   vv := v;
