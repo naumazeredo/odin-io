@@ -10,6 +10,13 @@ import "core:strings"
 
 _print_f64_dumb :: proc(builder: ^strings.Builder, v: f64, digits: uint = 6) {
   vv := v;
+
+  if vv < 0 {
+    strings.write_byte(builder, '-');
+    vv = -vv;
+  }
+
+
   integral : uint = auto_cast vv;
 
   strings.write_uint(builder, integral);
